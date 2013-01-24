@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title>Tip Test</title>
+
+    <script src="build/build.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="build/build.css">
+
+    <style type="text/css" media="all">
+      body {
+        font-family: sans-serif;
+        padding: 100px;
+        padding-left: 300px;
+      }
+
+      p {
+        display: inline-block;
+        margin-right: 200px;
+        margin-bottom: 50px;
+      }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      var Tip = require('component-tip');
+      var domready = require('jb55-domready');
+
+      domready(function(){
+        ["one", "two", "three", "four", "five"].forEach(function(id){
+          var el = document.getElementById(id);
+          var tip = new Tip("This is tooltip " + id + "<br />What is this about")
+            .position(el.innerHTML)
+            .show(el)
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p id="one">north</p><br />
+    <p id="two">north east</p><br />
+    <p id="three">east</p><br />
+    <p id="four">south west</p><br />
+    <p id="five">south</p><br />
+  </body>
+</html>

@@ -1,12 +1,15 @@
 {
-  "name": "aurora-tip",
-  "repo": "component/aurora-tip",
-  "description": "Aurora theme for tool tips",
+  "name": "nightrider-tip",
+  "repo": "jb55/nightrider-tip",
+  "description": "Nightrider theme for tool tips",
   "version": "0.0.1",
-  "keywords": ["aurora", "theme", "tip", "tooltip", "tooltips"],
+  "keywords": ["nightrider", "theme", "tip", "tooltip", "tooltips"],
   "dependencies": {},
-  "development": {},
+  "development": {
+    "jb55/domready": "*",
+    "component/tip": "*"
+  },
   "styles": [
-    "aurora-tip.css"
+    "nightrider-tip.css"
   ]
 }
